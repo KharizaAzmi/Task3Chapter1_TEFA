@@ -31,7 +31,7 @@ func addProduct(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json") // for adding Content-type
 
 	var data Product
-	err := json.NewDecoder(r.Body).Decode(&data) // storing in person variable of type user
+	err := json.NewDecoder(r.Body).Decode(&data) // storing in product variable of type user
 	if err != nil {
 		fmt.Print(err)
 	}
@@ -58,7 +58,7 @@ func addProduct(w http.ResponseWriter, r *http.Request) {
 
 }
 
-// Get Profile of a particular User by Name
+// Get Profile of a particular product by ID
 
 func getProductProfile(w http.ResponseWriter, r *http.Request) {
 
